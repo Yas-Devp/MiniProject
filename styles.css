@@ -1,0 +1,248 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(1, 1, 1, 0.5);
+	width: 100%;
+	color: #fff;
+	padding: 10px;
+	place-items: center;
+
+}
+
+.logo{
+	background-color: #41A7E8;
+	padding: 5px;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+nav{
+	margin-left: auto;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	list-style: none;
+	margin-left: auto;
+}
+
+nav ul li a{
+	color: #fff;
+	background-color: transparent;
+	text-decoration: none;
+	transition: 0.3s;
+	padding: 7px;
+	border-radius: 8px;
+}
+
+nav ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.icon{
+	width: 30px;
+	height: 20px;
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.icon span{
+	height: 5px;
+	width: 100%;
+	background-color: #fff;
+}
+
+section{
+	height: 100dvh;
+}
+
+.intro{
+	background: linear-gradient(to bottom, #41A7E8, #68C5FF ,#fff);
+}
+
+.overlay{
+	height: 100dvh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+
+.right , .left{
+	width: 50%;
+	height: 100dvh;
+	height: fit-content;
+	padding: 15px;
+}
+
+.right{
+	text-align: center;
+}
+
+.right img{
+	width: 100%;
+	height: auto;
+}
+
+.start{
+	padding: 12px;
+	border: none;
+	border-radius: 12px;
+	background-color: #41A7E8;
+	color: #fff;
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.start:hover{
+	transform: scale(1.05);
+	cursor: pointer;
+	box-shadow: 0px 0px 10px #41A7E8;
+	background-color: transparent;
+	color: #41A7E8;
+	border: 2px #41A7E8;
+}
+
+
+.cars_container{
+	place-content: center;
+}
+
+.cars{
+	width: 100%;
+	padding: 10px;
+	gap: 12px;
+	overflow: scroll;
+	display: flex;
+	flex-direction: row;
+}
+
+.car{
+	width: 300px;
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 12px;
+	box-shadow: 0px 0px 10px #737272;
+}
+
+.car .car_img{
+	width: 200px;
+	height: 150px;
+	object-fit: contain;
+	margin: auto;
+}
+
+.car .drive{
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	background-color: #41A7E8;
+	border: none;
+	margin-top: 30px;
+	border-radius: 15px;
+	color: #fff;
+	font-weight: bold;
+
+}
+
+.car .drive:hover{
+	background-color: transparent;
+	border: 2px solid #41A7E8;
+	color: #41A7E8;
+	cursor: pointer;
+}
+
+footer{
+	background-color: #000101;
+	color: #fff;
+	padding: 20px;
+}
+
+footer h1{
+	text-align: center;
+	color: #41A7E8;
+}
+
+footer .bbb{
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+footer .bbb .ttt{
+	width: 50%;
+	margin-top: 12px;
+	padding: 8px;
+	text-align: center;
+}
+
+.ttt p{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.ttt ul{
+	list-style: none;
+}
+
+.ttt ul li a{
+	text-decoration: none;
+	color: #CBCBCB;
+	font-size: 18px;
+}
+
+.ttt ul li a:hover{
+	text-decoration: underline;
+}
+@media only screen and (max-width: 800px) {
+	.icon{
+  		position: absolute;
+  		display: flex;
+  		right: 10px;
+  	}
+
+  	.overlay{
+		flex-direction: column-reverse;
+		justify-content: center;
+		text-align: center;
+		padding: 10px;
+	}
+
+  	.right, .left{
+  		width: 100%;
+  	}
+
+  	nav{
+  		display: none;
+  		position: fixed;
+  		width: 100%;
+  		top: 49px;
+  		padding: 20px;
+  		background-color: rgba(1, 1, 1, 0.5);
+  		margin: 0;
+  		left: 0;
+	}
+
+	nav ul{
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.icon:hover{
+		animation: rotation 1s;
+	}
+}
