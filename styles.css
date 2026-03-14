@@ -215,16 +215,19 @@ footer .bbb .ttt{
 	height:fit-content;
 	padding: 20px;
 	padding-top: 60px;
-	border-radius: 10px;
+	background: url('./imgs/pc_bg.jpeg');
 }
 
 .contact form {
 	max-width: 600px;
-	margin: auto;
+	left: 12px;
 	padding: 12px;
 	padding-bottom: 30px;
-	box-shadow: 0px 5px 1px #41A7E8, 0px -5px 1px #41A7E8;
+	border: 2px #fff solid;
+	box-shadow: 0px 0px 5px #41A7E8;
 	border-radius: 20px;
+	backdrop-filter: blur(2px);
+	color: #fff;
 }
 
 .contact label {
@@ -239,11 +242,16 @@ footer .bbb .ttt{
 	border: 2px solid #ccc;
 	border-radius: 5px;
 	transition: border-color 0.3s;
+	background-color: rgba(1,1,1,0.2);
 }
 
 .contact input:focus, .contact textarea:focus {
 	border-color: #41A7E8;
 	outline:none;
+}
+
+.contact input::placeholder , .contact textarea::placeholder{
+	color:#fff;
 }
 
 .contact button {
@@ -259,7 +267,7 @@ footer .bbb .ttt{
 }
 
 .contact button:hover {
-	background-color: #fff;
+	background-color:transparent;
 	color: #41A7E8;
 	border: 2px solid #41A7E8;
 }
@@ -351,5 +359,15 @@ footer .bbb .ttt{
 
 	.icon:hover{
 		animation: rotation 1s;
+	}
+	
+	.contact{
+		background: url('./imgs/phone_bg.jpg');
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+	
+	.contact{
+		margin: auto;
 	}
 }
