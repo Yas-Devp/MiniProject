@@ -219,25 +219,27 @@ footer .bbb .ttt{
 }
 
 .contact form {
-	max-width: 600px;
+	max-width: 400px;
 	left: 12px;
 	padding: 12px;
 	padding-bottom: 30px;
-	border: 2px #fff solid;
-	box-shadow: 0px 0px 5px #41A7E8;
+	/*border: 2px #fff solid;*/
+	box-shadow: 0px 0px 5px #fff;
 	border-radius: 20px;
-	backdrop-filter: blur(2px);
+	backdrop-filter: blur(5px);
 	color: #fff;
 }
 
 .contact label {
 	display: block;
 	margin: 10px 0 5px;
+	font-weight:bold;
 }
 
 .contact input, .contact textarea {
 	width: 100%;
 	padding: 10px;
+	color: #fff;
 	margin-bottom: 15px;
 	border: 2px solid #ccc;
 	border-radius: 5px;
@@ -255,7 +257,8 @@ footer .bbb .ttt{
 }
 
 .contact button {
-	
+	width: 60%;
+	margin-left: 20%;
 	padding: 10px 30px;
 	background-color: #41A7E8;
 	color: #fff;
@@ -268,7 +271,6 @@ footer .bbb .ttt{
 
 .contact button:hover {
 	background-color:transparent;
-	color: #41A7E8;
 	border: 2px solid #41A7E8;
 }
 
@@ -283,44 +285,17 @@ footer .bbb .ttt{
 
 .social-buttons a {
 	padding: 10px 15px;
-	background-color: #41A7E8;
+	background-color:transparent;
 	color: #fff;
+	border: 2px solid #fff;
 	border-radius: 5px;
 	text-decoration: none;
 	transition: background-color 0.3s, color 0.3s;
 }
 
-.social-buttons .whatsapp{
-	background-color:green;
-	border-color: green;
-}
-
-.social-buttons .facebook{
-	background-color: blue;
-	border-color: blue;
-}
-
-.social-buttons .instagram{
-	background-color: pink;
-	border-color: pink;
-}
-
-.social-buttons .whatsapp:hover {
+.social-buttons a:hover{
 	background-color: #fff;
-	color: green;
-	border: 2px green solid;
-}
-
-.social-buttons .facebook:hover {
-	background-color: #fff;
-	color: blue;
-	border: 2px blue solid;
-}
-
-.social-buttons .instagram:hover {
-	background-color: #fff;
-	color: pink;
-	border: 2px pink solid;
+	color: #000;
 }
 
 @media only screen and (max-width: 800px) {
