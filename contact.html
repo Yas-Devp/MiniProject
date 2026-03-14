@@ -26,27 +26,43 @@
 	</header>
 
 	<section class="contact">
-		<h1>Contact Us</h1>
-		<form>
-			<label for="full-name">Full Name:</label>
-			<input type="text" id="full-name" name="full-name" required>
-
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
-
-			<label for="phone">Phone Number:</label>
-			<input type="tel" id="phone" name="phone" required>
-
-			<label for="message">Message:</label>
-			<textarea id="message" name="message" required></textarea>
-
+		<form action="#" method="post">
+			<h1 style="text-align: center;" >Contact Us</h1>
+			<div>
+				<label for="full-name">Full Name:</label>
+				<input type="text" id="full-name" name="full-name" placeholder="your name ..." required>
+			</div>
+			
+			<div>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" placeholder="your email ..."  required>
+			</div>
+			
+			<div>
+				<label for="phone">Phone Number:</label>
+				<input type="tel" id="phone" name="phone" placeholder="your phone number ..."  required>
+			</div>
+			
+			<div>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" placeholder="write a message for us ..." required></textarea>
+			</div>
+			
 			<button type="submit">Submit</button>
+			
+			<div class="separateur" style="display:flex; flex-direction:row;align-items:center; gap:5px;margin-top:50px;" >
+				<span style="width:50%; height:1px; background-color:#000;" ></span>
+				<h3>Or</h3>
+				<span style="width:50%; height:1px; background-color:#000;"></span>
+			</div>
+			
+			<div class="social-buttons">
+				<a href="#" class="whatsapp">WhatsApp</a>
+				<a href="#" class="facebook">Facebook</a>
+				<a href="#" class="instagram">Instagram</a>
+			</div>
 		</form>
-		<div class="social-buttons">
-			<a href="#" class="whatsapp">WhatsApp</a>
-			<a href="#" class="facebook">Facebook</a>
-			<a href="#" class="instagram">Instagram</a>
-		</div>
+		
 	</section>
 
 	<footer>
