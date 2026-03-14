@@ -3,8 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
 	<title>DriveHub : Car Booking Website - Cars</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.cars_container {
+			padding: 20px;
+		}
+		.cars {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: 20px;
+		}
+		.car {
+			border: 1px solid #ccc;
+			border-radius: 8px;
+			padding: 10px;
+			text-align: center;
+			transition: transform 0.2s;
+		}
+		.car:hover {
+			transform: scale(1.05);
+		}
+		.car_img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+		.drive {
+			background-color: #007BFF;
+			color: white;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.drive:hover {
+			background-color: #0056b3;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -25,91 +63,35 @@
 		</div>
 	</header>
 
-	<section class="cars-container">
+	<section class="cars_container">
 		<h2 style="margin-bottom: 12px;">Our Cars</h2>
 		<div class="cars">
-			<div class="car-card">
-				<img class="car-image" src="./imgs/toyota_corolla.png" alt="Toyota Corolla">
-				<h2 class="car-title">Toyota Corolla</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
+			<div class="car">
+				<img class="car_img" src="./imgs/toyota_corolla.png" alt="Toyota Corolla">
+				<h2 class="car_name">Toyota Corolla</h2>
+				<p class="car_desc">classic, good looking, cool ...</p>
+				<button class="drive">Drive !!</button>
 			</div>
 
-			<div class="car-card">
-				<img class="car-image" src="./imgs/mercedess_benz_a_class.png" alt="Mercedess Benz">
-				<h2 class="car-title">Mercedess Benz</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
+			<div class="car">
+				<img class="car_img" src="./imgs/mercedess_benz_a_class.png" alt="Mercedess Benz">
+				<h2 class="car_name">Mercedess Benz</h2>
+				<p class="car_desc">classic, good looking, cool ...</p>
+				<button class="drive">Drive !!</button>
 			</div>
 
-			<div class="car-card">
-				<img class="car-image" src="./imgs/hyundai_tucson.png" alt="Hyundai TUCSON">
-				<h2 class="car-title">Hyundai TUCSON</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
+			<div class="car">
+				<img class="car_img" src="./imgs/hyundai_tucson.png" alt="Hyundai TUCSON">
+				<h2 class="car_name">Hyundai TUCSON</h2>
+				<p class="car_desc">classic, good looking, cool ...</p>
+				<button class="drive">Drive !!</button>
 			</div>
 
-			<div class="car-card">
-				<img class="car-image" src="./imgs/vw_jetta.png" alt="VolksWagen Jetta">
-				<h2 class="car-title">VolksWagen Jetta</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/toyota_corolla.png" alt="Toyota Corolla">
-				<h2 class="car-title">Toyota Corolla</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/mercedess_benz_a_class.png" alt="Mercedess Benz">
-				<h2 class="car-title">Mercedess Benz</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/hyundai_tucson.png" alt="Hyundai TUCSON">
-				<h2 class="car-title">Hyundai TUCSON</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/vw_jetta.png" alt="VolksWagen Jetta">
-				<h2 class="car-title">VolksWagen Jetta</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/toyota_corolla.png" alt="Toyota Corolla">
-				<h2 class="car-title">Toyota Corolla</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/mercedess_benz_a_class.png" alt="Mercedess Benz">
-				<h2 class="car-title">Mercedess Benz</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/hyundai_tucson.png" alt="Hyundai TUCSON">
-				<h2 class="car-title">Hyundai TUCSON</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
-			</div>
-
-			<div class="car-card">
-				<img class="car-image" src="./imgs/vw_jetta.png" alt="VolksWagen Jetta">
-				<h2 class="car-title">VolksWagen Jetta</h2>
-				<p class="car-description">classic, good looking, cool ...</p>
-				<button class="drive-button">Drive !!</button>
+			<div class="car">
+				<img class="car_img" src="./imgs/vw_jetta.png" alt="VolksWagen Jetta">
+				<h2 class="car_name">VolksWagen Jetta</h2>
+				<p class="car_desc">classic, good looking, cool ...</p>
+				<button class="drive">Drive !!</button>
 			</div>
 		</div>
 	</section>
