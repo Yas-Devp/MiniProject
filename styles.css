@@ -210,6 +210,9 @@ footer .bbb .ttt{
 .contact {
 	padding: 20px;
 	text-align: center;
+	background: linear-gradient(to bottom, #41A7E8, #68C5FF ,#fff);
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact form {
@@ -228,6 +231,11 @@ footer .bbb .ttt{
 	margin-bottom: 15px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+	transition: border-color 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
+	border-color: #41A7E8;
 }
 
 .contact button {
@@ -237,6 +245,7 @@ footer .bbb .ttt{
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .contact button:hover {
@@ -256,6 +265,7 @@ footer .bbb .ttt{
 	color: #fff;
 	border-radius: 5px;
 	text-decoration: none;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .social-buttons a:hover {
