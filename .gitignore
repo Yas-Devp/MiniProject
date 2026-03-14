@@ -1,0 +1,5 @@
+*.bak
+.env
+*.log
+*.backup
+*.txt
