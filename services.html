@@ -13,19 +13,22 @@
 		}
 
 		.services_intro {
-			background: url('intro-bg.jpg') no-repeat center center/cover;
+			background: url('./imgs/pc_bg.jpeg') no-repeat center center/cover;
 			color: white;
-			padding: 50px 20px;
 			text-align: center;
 		}
 
-		.overlay {
+		.overlay2 {
+		    height: 100dvh;
+		    display: flex;
+	        flex-direction: column;
+	        place-content: center;
 			background: rgba(0, 0, 0, 0.5);
 			padding: 20px;
-			border-radius: 10px;
 		}
 
 		.services_container {
+		    height: fit-content;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-around;
@@ -61,6 +64,9 @@
 			.service {
 				width: calc(45% - 40px);
 			}
+			.services_intro{
+			    background: url('./imgs/phone_bg.jpg') no-repeat center center/cover;
+			}
 		}
 
 		@media (max-width: 480px) {
@@ -76,7 +82,7 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="index.html">Accueil</a></li>
-				<li><a href="#">Services</a></li>
+				<li><a href="services.html">Services</a></li>
 				<li><a href="cars.html">Browse</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
@@ -90,7 +96,7 @@
 	</header>
 
 	<section class="services_intro">
-		<div class="overlay">
+		<div class="overlay2">
 			<h1>Our Professional Services</h1>
 			<p>At DriveHub, we offer a range of services to ensure your car booking experience is seamless and enjoyable. Explore our services below:</p>
 		</div>
@@ -140,7 +146,7 @@
 				<p>Pages : </p>
 				<ul>
 					<li><a href="index.html">Accueil</a></li>
-					<li><a href="#">Services</a></li>
+					<li><a href="services.html">Services</a></li>
 					<li><a href="cars.html">Browse</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
