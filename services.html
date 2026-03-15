@@ -58,11 +58,21 @@
 			padding: 20px;
 			width: calc(30% - 40px);
 			transition: transform 0.3s, box-shadow 0.3s;
+			position: relative;
 		}
 
 		.service:hover {
 			transform: translateY(-5px);
 			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+		}
+
+		.service h2 {
+			color: #333;
+			margin-bottom: 10px;
+		}
+
+		.service p {
+			color: #666;
 		}
 
 		footer {
@@ -85,6 +95,18 @@
 		footer a {
 			color: #fff;
 			text-decoration: none;
+		}
+
+		@media (max-width: 768px) {
+			.service {
+				width: calc(45% - 40px);
+			}
+		}
+
+		@media (max-width: 480px) {
+			.service {
+				width: calc(100% - 40px);
+			}
 		}
 	</style>
 </head>
