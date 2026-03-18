@@ -12,3 +12,29 @@ menu_icon.addEventListener('click', (e) => {
 		menu_icon.style.transform = 'scale(1)';
 	}
 });
+
+const bmw = document.getElementById("bmw");
+const merc = document.getElementById("mercedes");
+const hyundai = document.getElementById("hyundai");
+const toyota = document.getElementById("toyota");
+const vw = document.getElementById("vw");
+
+bmw.addEventListener('click' , function(){
+    window.location.href = "cars.html#bmw";
+});
+
+hyundai.addEventListener('click' , function(){
+    window.location.href = "cars.html#hyundai";
+});
+
+merc.addEventListener('click' , function(){
+    window.location.href = "cars.html#mercedes";
+});
+
+toyota.addEventListener('click' , function(){
+    window.location.href = "cars.html#toyota";
+});
+
+vw.addEventListener('click' , function(){
+    window.location.href = "cars.html#vw";
+});
