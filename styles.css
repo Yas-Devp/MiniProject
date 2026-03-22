@@ -140,10 +140,7 @@ section{
 
 .brand{
 	width: 300px;
-	background-color: #fff;
-	border-radius: 15px;
 	padding: 12px;
-	box-shadow: 0px 0px 10px #737272;
 }
 
 .car_img{
@@ -155,7 +152,9 @@ section{
 
 .car_img:hover{
 	transform: scale(1.2);
+	filter: drop-shadow(5px 5px 10px #41A7E8);
 }
+
 /*
 .car_name{
 	font-size: 20px;
@@ -170,13 +169,14 @@ section{
 }
 */
 
+
 .car .drive, .car_card .drive{
 	width: 100%;
 	padding: 10px;
 	font-size: 18px;
 	background-color: #41A7E8;
 	border: none;
-	margin-top: 30px;
+	margin-top: auto;
 	border-radius: 15px;
 	color: #fff;
 	font-weight: bold;
