@@ -120,20 +120,25 @@ section{
 	border: 2px solid #41A7E8;
 }
 
-.cars_container{
-	place-content: center;
+.brand_container{
+	height: fit-content;
+	padding: 20px;
 }
 
-.cars{
+.brands , .cars{
 	width: 100%;
 	padding: 10px;
 	gap: 12px;
-	overflow: scroll;
+	overflow-x: scroll;
 	display: flex;
 	flex-direction: row;
 }
 
-.car{
+.cars{
+	justify-content: space-around;
+}
+
+.brand{
 	width: 300px;
 	background-color: #fff;
 	border-radius: 15px;
@@ -141,12 +146,29 @@ section{
 	box-shadow: 0px 0px 10px #737272;
 }
 
-.car .car_img{
+.car_img{
 	width: 200px;
 	height: 150px;
 	object-fit: contain;
 	margin: auto;
 }
+
+.car_img:hover{
+	transform: scale(1.2);
+}
+/*
+.car_name{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.price{
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: auto;
+}
+*/
 
 .car .drive, .car_card .drive{
 	width: 100%;
@@ -167,6 +189,37 @@ section{
 	cursor: pointer;
 }
 
+/*
+.cars .car div{
+	display: flex;
+	flex-wrap: nowrap;
+	align-self: flex-end;
+	margin-top: auto;
+	gap: 10px;
+
+}
+.cars button{
+	width: 50%;
+	padding: 10px 0;
+	border-radius: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.cars .allouer{
+	border: 2px #c03333 solid;
+	color: #c03333;
+}
+
+.cars .voir_plus{
+	border: 2px #41A7E8 solid;
+	color: #41A7E8;
+}
+*/
+
+/*========================================================================*/
 footer{
 	background-color: #000101;
 	color: #fff;
