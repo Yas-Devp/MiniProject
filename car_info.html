@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveHub : Car Booking Website - Car Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .car_container{
+            display: flex;
+            flex-direction: row;
+            height: 100dvh;
+            align-items: center;
+        }
+
+        .right, .left{
+            width: 50%;
+        }
+
+        .right img{
+            width: 100%;
+            height: auto;
+        }
+
+        .name{
+            font-size: 25px;
+            font-weight: bolder;
+            margin-bottom: 50px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        #allouer{
+            color: #2ea45d;
+            border: 2px #2ea45d solid;
+        }
+        #allouer:hover{
+            background-color: #2ea45d;
+            color: #fff;
+        }
+
+        #contact{
+            color: #41A7E8;
+            border: 2px #41A7E8 solid;
+        }
+        #contact:hover{
+            background-color: #41A7E8;
+            color: #fff;
+        }
+
+        .price{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+		<a href="index.html" style="text-decoration: none;color: #fff;"><p class="logo">DriveHub</p></a>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="cars.html">Browse</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="icon" id="icon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
+
+
+    <div class="car_container">
+        <div class="right">
+            <img src="./imgs/bmw_blue.png" alt="car">
+        </div>
+
+        <div class="left">
+            <p class="name">Beautiful Car</p>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repudiandae porro dicta eius aliquam maxime saepe molestias voluptatibus. Error accusantium quidem ea minima quis. Impedit mollitia sequi alias possimus quo.</p>
+            
+            <div class="btns" style="margin-top: 30px;">
+                <p class="price">300dh/mois</p>
+                <button id="allouer">Allouer</button>
+                <button id="contact">Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+		<h1>DriveHub</h1>
+		<div class="bbb">
+			<div class="ttt">
+				<p>Categories : </p>
+				<ul>
+					<li><a href="cars.html#bmw">Bmw Cars</a></li>
+					<li><a href="cars.html#mercedess">Mercedess Cars</a></li>
+					<li><a href="cars.html#toyota">Toyota Cars</a></li>
+					<li><a href="cars.html#vw">VolksWagen Cars</a></li>
+					<li><a href="cars.html#hyundai">Hyundai Cars</a></li>
+				</ul>
+			</div>
+			<div class="ttt">
+				<p>Pages : </p>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="cars.html">Browse</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<p style="text-align: center;margin-top: 30px;">&copy; 2025/2026 , <span style="text-decoration: underline;">DriveHub</span> [All rights reserved] </p>
+	</footer>
+</body>
+</html>

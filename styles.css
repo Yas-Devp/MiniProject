@@ -132,6 +132,7 @@ section{
 	overflow-x: scroll;
 	display: flex;
 	flex-direction: row;
+	scrollbar-width: none;
 }
 
 .cars{
