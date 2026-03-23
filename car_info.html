@@ -11,10 +11,11 @@
             flex-direction: row;
             height: 100dvh;
             align-items: center;
+            justify-content: center;
         }
 
         .right, .left{
-            width: 50%;
+            width: 40%;
         }
 
         .right img{
@@ -27,7 +28,9 @@
             font-weight: bolder;
             margin-bottom: 50px;
         }
-
+        .desc{
+            font-size: 20px;
+        }
         button{
             padding: 10px 20px;
             background-color: #fff;
@@ -59,6 +62,21 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+
+        @media only screen and (max-width: 800px) {
+            .car_container{
+                flex-direction: column;
+                height: fit-content;
+            }
+            .right, .left{
+                width: 100%;
+                padding: 20px;
+            }
+
+            .desc{
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -84,15 +102,15 @@
 
     <div class="car_container">
         <div class="right">
-            <img src="./imgs/bmw_blue.png" alt="car">
+            <img src="./imgs/bmw_blue.png" alt="car" id="img">
         </div>
 
         <div class="left">
-            <p class="name">Beautiful Car</p>
-            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repudiandae porro dicta eius aliquam maxime saepe molestias voluptatibus. Error accusantium quidem ea minima quis. Impedit mollitia sequi alias possimus quo.</p>
+            <p class="name" id="name">Beautiful Car</p>
+            <p class="desc" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repudiandae porro dicta eius aliquam maxime saepe molestias voluptatibus. Error accusantium quidem ea minima quis. Impedit mollitia sequi alias possimus quo.</p>
             
             <div class="btns" style="margin-top: 30px;">
-                <p class="price">300dh/mois</p>
+                <p class="price" id="price">300dh/mois</p>
                 <button id="allouer">Allouer</button>
                 <button id="contact">Contact</button>
             </div>
@@ -125,5 +143,14 @@
 
 		<p style="text-align: center;margin-top: 30px;">&copy; 2025/2026 , <span style="text-decoration: underline;">DriveHub</span> [All rights reserved] </p>
 	</footer>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        document.getElementById('name').innerText = urlParams.get('name');
+        document.getElementById('desc').innerText = urlParams.get('desc');
+        document.getElementById('img').src = urlParams.get('img');
+    </script>
 </body>
 </html>
