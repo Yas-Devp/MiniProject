@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
@@ -25,7 +27,9 @@ header{
 	background-color: #41A7E8;
 	padding: 5px;
 	border-radius: 6px;
-	font-weight: bold;
+	font-family: "Momo Signature", cursive;
+	font-weight: 400;
+	font-style: normal;
 }
 
 nav{
@@ -235,6 +239,9 @@ footer{
 footer h1{
 	text-align: center;
 	color: #41A7E8;
+	font-family: "Momo Signature", cursive;
+  	font-weight: 400;
+  	font-style: normal;
 }
 
 footer .bbb{
