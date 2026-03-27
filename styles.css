@@ -6,6 +6,7 @@
 
 body{
     font-family: Arial, sans-serif;
+	scroll-behavior: smooth;
 }
 
 header{
@@ -142,6 +143,10 @@ section{
 .brand{
 	width: 300px;
 	padding: 12px;
+}
+
+.brand , .car{
+	cursor: pointer;
 }
 
 .car_img{

@@ -34,7 +34,7 @@
 				discover with us our various modern , sport and family cars , nothing can make you hesitate , just scroll down and start a tour
 				</p>
 
-				<button class="start">Take a Tour !</button>
+				<button class="start" id="start">Take a Tour !</button>
 			</div>
 
 			<div class="right">
@@ -72,7 +72,7 @@
 		</div>
 
 
-		<h2 style="text-align: center; margin: 10px 0;">Quick Select</h2>
+		<h2 style="text-align: center; margin: 10px 0;" id="tour_start">Best-selling cars</h2>
 		<div class="cars">
 			<div class="car" id="bmw">
 				<img class="car_img" src="./imgs/bmw_car2.png" alt="Bg image">
@@ -163,6 +163,45 @@
 
 
 	<script src="script.js"></script>
+	<script>
+		document.getElementById('start').addEventListener('click', function(){
+			window.location.href = 'index.html#tour_start';
+		});
+
+		const cars = [
+			{
+				'name': 'BMW 3',
+				'desc': 'The perfect balance between business and pleasure. The BMW 3 Series offers a driver-focused cockpit with rear-wheel-drive agility that makes every commute exhilarating. Wrapped in a sophisticated silhouette, it provides ample space for a small family without sacrificing the sporty handling that BMW is famous for.',
+				'price': 21500
+			},
+			{
+				'name': 'Mercedes Benz Class A',
+				'desc': 'Step into the future with the Mercedes-Benz A-Class. A gateway to luxury, this compact car is packed with cutting-edge technology, including the stunning MBUX infotainment system. With its sporty yet elegant interior, turbocharged performance, and iconic star on the grille, it delivers a premium experience for small families or couples who refuse to compromise on style.',
+				'price': 19000
+			},
+			{
+				'name': 'Toyota Camry',
+				'desc': 'Who says family sedans can’t be exciting? The Toyota Camry XSE shatters expectations with its aggressive mesh grille, sport-tuned suspension, and striking two-tone paint options. Under the hood, it offers spirited performance, while the interior provides the legendary reliability, safety, and spaciousness that families need..',
+				'price': 16500
+			},
+			{
+				'name': 'VolksWagen Jetta',
+				'desc': 'Experience German engineering at an exceptional value with the VW Jetta. This compact sedan delivers a composed, confident ride with a spacious interior that rivals larger vehicles. With its generous trunk space, intuitive technology, and impressive fuel efficiency, the Jetta is the smart, stylish choice for families and commuters who appreciate quality without the premium price tag',
+				'price': 14000
+			},
+			{
+				'name': 'Toyota Elantra',
+				'desc': 'A track-ready sedan that refuses to compromise. The Hyundai Elantra N is a high-performance machine equipped with launch control, an exhaust system that pops and crackles, and aggressive aerodynamics. It proves that you don’t have to break the bank to experience heart-pounding performance and razor-sharp cornering',
+				'price': 13000
+			}
+		]
+
+		document.querySelectorAll(".car").forEach((car, index)=>{
+			car.addEventListener('click', function(){
+				window.location.href = `car_info.html?name=${cars[index].name}&desc=${cars[index].desc}&price=${cars[index].price}&img=${car.getElementsByTagName('img')[0].src}`
+			})
+		})
+	</script>
 	
 </body>
 </html>

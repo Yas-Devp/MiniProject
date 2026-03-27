@@ -152,6 +152,14 @@
         document.getElementById('desc').innerText = urlParams.get('desc');
         document.getElementById('img').src = urlParams.get('img');
         document.getElementById('price').innerText = urlParams.get('price') + " dh/mois";
+
+        document.getElementById('contact').addEventListener('click', ()=>{
+            window.location.href = 'contact.html';
+        });
+
+        document.getElementById('allouer').addEventListener('click', ()=>{
+            alert("sorry but I didn't code this feature, it needs database and backend")
+        })
     </script>
 </body>
 </html>
