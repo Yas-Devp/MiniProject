@@ -147,10 +147,11 @@
     <script src="script.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        
+
         document.getElementById('name').innerText = urlParams.get('name');
         document.getElementById('desc').innerText = urlParams.get('desc');
         document.getElementById('img').src = urlParams.get('img');
+        document.getElementById('price').innerText = urlParams.get('price') + " dh/mois";
     </script>
 </body>
 </html>
