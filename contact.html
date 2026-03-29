@@ -25,45 +25,95 @@
 		</div>
 	</header>
 
-	<section class="contact">
-		<form action="#" method="post">
-			<h1 style="text-align: center;" >Contact Us</h1>
-			<div>
-				<label for="full-name">Full Name:</label>
-				<input type="text" id="full-name" name="full-name" placeholder="your name ..." required>
-			</div>
-			
-			<div>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="your email ..."  required>
-			</div>
-			
-			<div>
-				<label for="phone">Phone Number:</label>
-				<input type="tel" id="phone" name="phone" placeholder="your phone number ..."  value="+212" required>
-			</div>
-			
-			<div>
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" placeholder="write a message for us ..." required style="resize: vertical;"></textarea>
-			</div>
-			
-			<button type="submit">Submit</button>
-			
-			<div class="separateur" style="display:flex; flex-direction:row;align-items:center; gap:5px;margin-top:50px;" >
-				<span style="width:50%; height:1px; background-color:#000;" ></span>
-				<h3>Or</h3>
-				<span style="width:50%; height:1px; background-color:#000;"></span>
-			</div>
-			
-			<div class="social-buttons">
-				<a href="https://whatsapp.com" class="whatsapp">WhatsApp</a>
-				<a href="https://facebook.com" class="facebook">Facebook</a>
-				<a href="https://instagram.com" class="instagram">Instagram</a>
-			</div>
-		</form>
-		
-	</section>
+	<section class="contact" style="padding-top: 100px; padding-bottom: 50px; min-height: 100vh; display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center;">
+    <form action="#" method="post" style="
+        max-width: 550px; 
+        width: 90%; 
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.1); /* Very light transparent white */
+        backdrop-filter: blur(10px); /* Reduced blur for clarity */
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Thin 'glass' edge */
+        border-radius: 24px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    ">
+        <h2 style="text-align: center; color: #41A7E8; font-size: 2rem; margin-bottom: 10px; font-weight: 800;">Get Behind the Wheel</h2>
+        <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 0.95rem;">Premium vehicles for your next journey.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+            <div>
+                <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Full Name</label>
+                <input type="text" placeholder="John Doe" required style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 12px; width: 100%; border-radius: 8px; color: #fff;">
+            </div>
+            <div>
+                <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Phone</label>
+                <input type="tel" value="+212" required style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 12px; width: 100%; border-radius: 8px; color: #fff;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Select Vehicle</label>
+            <select style="background: rgba(40, 40, 40, 0.8); border: 1px solid rgba(255,255,255,0.3); padding: 12px; width: 100%; border-radius: 8px; color: #fff;">
+                <option>BMW M2</option>
+                <option>BMW 3</option>
+                <option>BMW X5</option>
+                <option>BMW X1</option>
+                <option>Toyota GR</option>
+                <option>Toyota Camry</option>
+                <option>Toyota Highlander</option>
+                <option>Toyota RAV4</option>
+                <option>Toyota GR corolla</option>
+                <option>Mercedes Benz class A</option>
+                <option>Mercedes class C </option>
+                <option>Mercedes Benz GLE</option>
+                <option>Mercedes Benz CLA</option>
+                <option>VolksWagen Golf GTI</option>
+                <optopn>VolksWagen Arteon</option>
+                <option>VolksWagen Tiguan</option>
+                <option>VolksWagen Jetta</option>
+                
+                <option>Hyundai Elantra</option>
+                <option>Hyundai Ioniq</option>
+                <option>Hyundai Tucson</option>
+            </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+            <div>
+                <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Pickup</label>
+                <input type="date" required style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 12px; width: 100%; border-radius: 8px; color: #fff; color-scheme: dark;">
+            </div>
+            <div>
+                <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Return</label>
+                <input type="date" required style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 12px; width: 100%; border-radius: 8px; color: #fff; color-scheme: dark;">
+            </div>
+        </div>
+        
+        <button type="submit" style="
+            width: 100%; 
+            padding: 15px; 
+            background: #41A7E8; 
+            color: #fff; 
+            border: none; 
+            border-radius: 12px; 
+            font-weight: 700; 
+            font-size: 1rem; 
+            cursor: pointer;
+            margin: 0 auto;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(65, 167, 232, 0.4);
+        ">Check Availability</button>
+
+        <div style="text-align: center; margin-top: 25px;">
+            <p style="font-size: 0.8rem; margin-bottom: 15px; opacity: 0.6;">Or reach out via</p>
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <a href="#" style="color: #fff; text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; transition: 0.3s;">WhatsApp</a>
+                <a href="#" style="color: #fff; text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; transition: 0.3s;">Instagram</a>
+            </div>
+        </div>
+    </form>
+</section>
 
 	<footer>
 		<h1>DriveHub</h1>

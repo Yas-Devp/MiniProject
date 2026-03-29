@@ -1,165 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveHub : Car Booking Website - Car Info</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>DriveHub | Premium Car Rental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        .car_container{
+        :root {
+            --primary: #2ea45d;
+            --secondary: #41A7E8;
+            --dark: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-main: #333;
+            --text-muted: #666;
+        }
+        
+        .car_container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            max-width: 1200px;
+            /*margin: 60px auto;*/
+            padding: 0 20px;
+            align-items: start;
+        }
+        
+        .right {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             display: flex;
-            flex-direction: row;
-            height: 100dvh;
             align-items: center;
             justify-content: center;
         }
-
-        .right, .left{
-            width: 40%;
-        }
-
-        .right img{
+        
+        .right img {
             width: 100%;
             height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+            transition: transform 0.5s ease;
         }
-
-        .name{
-            font-size: 25px;
-            font-weight: bolder;
-            margin-bottom: 50px;
+        
+        .right img:hover { transform: scale(1.02); }
+        
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
         }
-        .desc{
-            font-size: 20px;
+        
+        .spec-item {
+            background: #f0f2f5;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
         }
-        button{
-            padding: 10px 20px;
-            background-color: #fff;
-            border-radius: 15px;
-            font-size: large;
+        
+        .left .name {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            color: var(--dark);
+        }
+        
+        .price-tag {
+            font-size: 28px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .desc {
+            color: var(--text-muted);
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+        
+        .btns {
+            display: flex;
+            gap: 15px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 16px 30px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
         }
-
-        #allouer{
-            color: #2ea45d;
-            border: 2px #2ea45d solid;
+        
+        #allouer {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(46, 164, 93, 0.3);
         }
-        #allouer:hover{
-            background-color: #2ea45d;
-            color: #fff;
+        
+        #allouer:hover {
+            background-color: #258a4e;
+            transform: translateY(-2px);
         }
-
-        #contact{
-            color: #41A7E8;
-            border: 2px #41A7E8 solid;
+        
+        #contact {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
         }
-        #contact:hover{
-            background-color: #41A7E8;
-            color: #fff;
+        
+        #contact:hover {
+            background-color: var(--secondary);
+            color: white;
         }
-
-        .price{
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        @media only screen and (max-width: 800px) {
-            .car_container{
-                flex-direction: column;
-                height: fit-content;
+        
+        @media (max-width: 992px) {
+            .car_container {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
             }
-            .right, .left{
-                width: 100%;
-                padding: 20px;
-            }
-
-            .desc{
-                font-size: 18px;
-            }
+            .left .name { font-size: 32px; }
         }
+        
     </style>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
     <header>
-		<a href="index.html" style="text-decoration: none;color: #fff;"><p class="logo">DriveHub</p></a>
-		<nav id="nav">
-			<ul>
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="cars.html">Browse</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
+        <a href="index.html" style="text-decoration: none;color: #fff;">
+            <p class="logo">DriveHub</p>
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cars.html">Browse</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-		<div class="icon" id="icon">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</header>
+        <div class="icon" id="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
-
-    <div class="car_container">
+    <main class="car_container" style="margin-top: 0px;">
         <div class="right">
             <img src="./imgs/bmw_blue.png" alt="car" id="img">
         </div>
 
         <div class="left">
-            <p class="name" id="name">Beautiful Car</p>
-            <p class="desc" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repudiandae porro dicta eius aliquam maxime saepe molestias voluptatibus. Error accusantium quidem ea minima quis. Impedit mollitia sequi alias possimus quo.</p>
-            
-            <div class="btns" style="margin-top: 30px;">
-                <p class="price" id="price">300dh/mois</p>
-                <button id="allouer">Allouer</button>
-                <button id="contact">Contact</button>
+            <h1 class="name" id="name">Luxury Sedan</h1>
+
+            <div class="price-tag" id="price">300dh/mois</div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="rentType" style="font-weight: 600; display: block; margin-bottom: 5px;">Rental Duration:</label>
+                <select id="rentType" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 16px;">
+                    <option value="month">Monthly (Best Value)</option>
+                    <option value="day">Daily</option>
+                </select>
+            </div>
+
+            <p class="desc" id="desc">
+                Experience the pinnacle of automotive engineering. This vehicle combines performance, comfort, and style, making it the perfect choice for both business trips and weekend getaways.
+            </p>
+
+            <div class="specs-grid">
+                <div class="spec-item">⛽ Hybrid</div>
+                <div class="spec-item">⚙️ Automatic</div>
+                <div class="spec-item">👤 5 Seats</div>
+            </div>
+
+            <div class="btns">
+                <button id="allouer">Rent This Car</button>
+                <button id="contact">Inquire</button>
             </div>
         </div>
-    </div>
+    </main>
+
 
     <footer>
-		<h1>DriveHub</h1>
-		<div class="bbb">
-			<div class="ttt">
-				<p>Categories : </p>
-				<ul>
-					<li><a href="cars.html#bmw">Bmw Cars</a></li>
-					<li><a href="cars.html#mercedes">Mercedess Cars</a></li>
-					<li><a href="cars.html#toyota">Toyota Cars</a></li>
-					<li><a href="cars.html#vw">VolksWagen Cars</a></li>
-					<li><a href="cars.html#hyundai">Hyundai Cars</a></li>
-				</ul>
-			</div>
-			<div class="ttt">
-				<p>Pages : </p>
-				<ul>
-					<li><a href="index.html">Accueil</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="cars.html">Browse</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</div>
+        <h1>DriveHub</h1>
+        <div class="bbb">
+            <div class="ttt">
+                <p>Categories : </p>
+                <ul>
+                    <li><a href="cars.html#bmw">Bmw Cars</a></li>
+                    <li><a href="cars.html#mercedes">Mercedess Cars</a></li>
+                    <li><a href="cars.html#toyota">Toyota Cars</a></li>
+                    <li><a href="cars.html#vw">VW Cars</a></li>
+                    <li><a href="cars.html#hyundai">Hyundai Cars</a></li>
+                </ul>
+            </div>
+            <div class="ttt">
+                <p>Pages : </p>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="cars.html">Browse</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
 
-		<p style="text-align: center;margin-top: 30px;">&copy; 2025/2026 , <span style="text-decoration: underline;">DriveHub</span> [All rights reserved] </p>
-	</footer>
+        <p style="text-align: center;margin-top: 30px;">&copy; 2025/2026 , <span style="text-decoration: underline;">DriveHub</span> [All rights reserved] </p>
+    </footer>
 
-    <script src="script.js"></script>
-    <script>
+     <script>
         const urlParams = new URLSearchParams(window.location.search);
-
-        document.getElementById('name').innerText = urlParams.get('name');
-        document.getElementById('desc').innerText = urlParams.get('desc');
-        document.getElementById('img').src = urlParams.get('img');
-        document.getElementById('price').innerText = urlParams.get('price') + " dh/mois";
-
+        const priceDisplay = document.getElementById('price');
+        const rentSelector = document.getElementById('rentType');
+        
+        // Get base monthly price from URL or default to 300
+        let baseMonthlyPrice = parseInt(urlParams.get('price')) || 300;
+        
+        function updatePrice() {
+            const type = rentSelector.value;
+            if (type === 'day') {
+                // Logic: Monthly price divided by 30 (standard month) + 20% premium for short term
+                const dailyPrice = Math.round((baseMonthlyPrice / 30) * 1.2);
+                priceDisplay.innerText = dailyPrice + " dh/jour";
+            } else {
+                priceDisplay.innerText = baseMonthlyPrice + " dh/mois";
+            }
+        }
+        
+        // Listen for changes in the dropdown
+        rentSelector.addEventListener('change', updatePrice);
+        
+        // Initial setup from URL
+        if(urlParams.has('name')) {
+            document.getElementById('name').innerText = urlParams.get('name');
+            document.getElementById('desc').innerText = urlParams.get('desc');
+            document.getElementById('img').src = urlParams.get('img');
+            updatePrice(); 
+        }
+        
         document.getElementById('contact').addEventListener('click', ()=>{
             window.location.href = 'contact.html';
         });
-
+        
         document.getElementById('allouer').addEventListener('click', ()=>{
-            alert("sorry but I didn't code this feature, it needs database and backend")
-        })
+            /*const total = priceDisplay.innerText;
+            alert("Booking system integration coming soon! Current selection: " + total);
+            */
+            window.location.href = 'contact.html';
+        });
     </script>
 </body>
+
 </html>

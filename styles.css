@@ -158,6 +158,7 @@ section{
 	height: 150px;
 	object-fit: contain;
 	margin: auto;
+	transition: 0.3s;
 }
 
 .car_img:hover{
@@ -165,20 +166,141 @@ section{
 	filter: drop-shadow(5px 5px 10px #41A7E8);
 }
 
-/*
-.car_name{
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
+/* Container styling for smooth horizontal scrolling */
+.brands, .cars {
+    width: 100%;
+    padding: 20px 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Changed to auto for better control */
+    scroll-behavior: smooth;
+    
+    /* Scroll Snapping - makes items "snap" into place */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling for iOS */
 }
 
-.price{
-	font-size: 18px;
-	font-weight: bold;
-	margin-top: auto;
+/* Individual item behavior */
+.brand, .car {
+    flex: 0 0 auto; /* Prevents items from shrinking */
+    scroll-snap-align: center; /* Snaps the item to the center of the screen */
+    background: #fff;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-*/
 
+/* Modern Custom Scrollbar (Chrome, Safari, Edge) */
+.brands::-webkit-scrollbar, 
+.cars::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.brands::-webkit-scrollbar-track, 
+.cars::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.brands::-webkit-scrollbar-thumb, 
+.cars::-webkit-scrollbar-thumb {
+    background: #41A7E8; /* Your brand color */
+    border-radius: 10px;
+}
+
+.brands::-webkit-scrollbar-thumb:hover, 
+.cars::-webkit-scrollbar-thumb:hover {
+    background: #358dc5;
+}
+
+/* Firefox Support */
+.brands, .cars {
+    scrollbar-width: thin;
+    scrollbar-color: #41A7E8 #f1f1f1;
+}
+
+.reviews_section {
+    height: auto; 
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+.reviews_section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.reviews_section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #41A7E8;
+    border-radius: 2px;
+}
+
+.reviews_container {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+.review_card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(65, 167, 232, 0.15);
+    border-color: #41A7E8;
+}
+
+.stars {
+    color: #FFD700; /* Gold color */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.review_card p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.review_card h4 {
+    color: #222;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.review_card h4::before {
+    content: '👤';
+    margin-right: 10px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
 
 .car .drive, .car_card .drive{
 	width: 100%;
@@ -411,4 +533,10 @@ footer .bbb .ttt{
 	.contact{
 		margin: auto;
 	}
+}
+
+@media only screen and (max-width: 600px) {
+    .reviews_container {
+        grid-template-columns: 1fr;
+    }
 }
